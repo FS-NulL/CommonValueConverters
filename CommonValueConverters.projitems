@@ -17,6 +17,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ColorToBrushConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IntEqualConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IntGreaterEqualConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntLessEqualConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NullToBoolConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringToLengthConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ValueConverterGroup.cs" />
