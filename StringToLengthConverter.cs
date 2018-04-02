@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace CommonValueConverters
 {
-    class StringToLengthConverter : IValueConverter
+    public class StringToLengthConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace CommonValueConverters
 {
-    class BoolInvertConverter : IValueConverter
+    public class BoolInvertConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace CommonValueConverters
 {
-    class IntLessEqualConverter : IValueConverter
+    public class IntLessEqualConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
