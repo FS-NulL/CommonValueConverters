@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 
@@ -9,7 +10,7 @@ namespace CommonValueConverters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is bool)) throw new InvalidCastException("BoolToColorConverter.Convert: Value must be a bool.");
+            if (!(value is bool)) return DependencyProperty.UnsetValue;
 
             bool b = (bool)value;
 
@@ -20,7 +21,7 @@ namespace CommonValueConverters
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is Color)) throw new InvalidCastException("BoolToColorConverter.Convert: Value must be a Color.");
+            if (!(value is Color)) return DependencyProperty.UnsetValue;
 
             Color c = (Color)value;
 
