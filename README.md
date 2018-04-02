@@ -23,6 +23,8 @@ A set of common value converters that can be used in WPF projects. The ValueConv
 
 The above example enables the button when there is >= 8 characters in the textbox.
 
+![Exmaple](https://i.imgur.com/uGRpsZZ.gif)
+
 ## Acknowledgements
 
 The ValueConverterGroup class was written by [Trevi Awater](https://github.com/awatertrevi/). The original can ne found [here.](https://gist.github.com/awatertrevi/68924981bdea1800f5af162e4eb2b1f5#file-valueconvertergroup-cs)
