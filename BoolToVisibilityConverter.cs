@@ -13,7 +13,7 @@ namespace CommonValueConverters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is bool)) throw new InvalidCastException("BoolToVisibilityConverter.Convert: Value must be a bool.");
+            if (!(value is bool)) return DependencyProperty.UnsetValue;
 
             bool b = (bool)value;
 
@@ -23,7 +23,7 @@ namespace CommonValueConverters
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is Visibility)) throw new InvalidCastException("BoolToVisibilityConverter.ConvertBack: Value must be Visibility.");
+            if (!(value is Visibility)) return DependencyProperty.UnsetValue;
 
             Visibility v = (Visibility)value;
 
