@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 
 namespace CommonValueConverters
@@ -8,12 +9,16 @@ namespace CommonValueConverters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return !((bool)value);
+            if (value is bool)
+            {
+                return !((bool)value);
+            }
+            else return DependencyProperty.UnsetValue;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return !((bool)value);
+            return Convert(value, targetType, parameter, culture);
         }
     }
 }
