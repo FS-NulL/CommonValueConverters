@@ -27,10 +27,10 @@ The above example enables the button when there is >= 8 characters in the textbo
 
 ## Acknowledgements
 
-The ValueConverterGroup class was written by [Trevi Awater](https://github.com/awatertrevi/). The original can ne found [here.](https://gist.github.com/awatertrevi/68924981bdea1800f5af162e4eb2b1f5#file-valueconvertergroup-cs)
+The ValueConverterGroup class was written by [Trevi Awater](https://github.com/awatertrevi/). The original can be found [here.](https://gist.github.com/awatertrevi/68924981bdea1800f5af162e4eb2b1f5#file-valueconvertergroup-cs)
 
 ## Getting Started
-Add the shared project to your solution, then add the following XML namespace to your window:
+Add the shared project to your solution, reference it in your project, then add the following XML namespace to your window XAML:
 ```
 xmlns:vc="clr-namespace:CommonValueConverters"
 ```
