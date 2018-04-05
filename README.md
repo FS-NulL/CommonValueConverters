@@ -99,5 +99,20 @@ Returns true if a given integer is less than or equal to a specified threshold.
 ### NullToBoolConverter
 Converts null to false and any non-null value to true.
 
+### StringEqualityConverter
+Returns true/false based on if the bound value matches the converter parameter.
+```
+<Window.Resources>
+    <vc:StringEqualityConverter x:Key="string_equal"/>
+</Window.Resources>
+...
+<TextBox x:Name="textbox"/>
+<Button Content="Equal 123" 
+        IsEnabled="{Binding ElementName=textbox, 
+            Path=Text, 
+            Converter={StaticResource string_equal},
+            ConverterParameter='123'}"/>
+```
+
 ### StringToLengthConverter
 Gets the length of a string and returns it as an integer.
