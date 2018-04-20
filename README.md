@@ -116,3 +116,71 @@ Returns true/false based on if the bound value matches the converter parameter.
 
 ### StringToLengthConverter
 Gets the length of a string and returns it as an integer.
+
+## MultiValueConverters
+These converters can take multiple inputs and produce a single output. The bindings inside the multibinding can use converters too.
+
+### AddIntConverter
+Adds up N number of integer inputs
+```
+<Window.Resources>
+    <mvc:AddIntConverter x:Key="add_converter"/>
+</Window.Resources>
+...
+<Slider Minimum="0" Maximum="10" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="sl1"/>
+<Slider Minimum="0" Maximum="10" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="sl2"/>
+<TextBlock>
+    <TextBlock.Text>
+        <MultiBinding Converter="{StaticResource add_converter}" StringFormat="{}{0}">
+            <Binding Path="Value" ElementName="sl1"/>
+            <Binding Path="Value" ElementName="sl2"/>
+        </MultiBinding>
+    </TextBlock.Text>
+</TextBlock>
+```
+
+### AllConverter
+Returns true if all inputs are true. Input type must be boolean.
+```
+<Window.Resources>
+    <mvc:AllConverter x:Key="all_true"/>
+</Window.Resources>
+...        
+<CheckBox Content="cb1" x:Name="cb1" HorizontalAlignment="Center"/>
+<CheckBox Content="cb2" x:Name="cb2" HorizontalAlignment="Center"/>
+<CheckBox Content="cb3" x:Name="cb3" HorizontalAlignment="Center"/>
+<CheckBox Content="cb4" x:Name="cb4" HorizontalAlignment="Center"/>
+<Button Content="All True">
+    <Button.IsEnabled>
+        <MultiBinding Converter="{StaticResource all_true}">
+            <Binding ElementName="cb1" Path="IsChecked"/>
+            <Binding ElementName="cb2" Path="IsChecked"/>
+            <Binding ElementName="cb3" Path="IsChecked"/>
+            <Binding ElementName="cb4" Path="IsChecked"/>
+        </MultiBinding>
+    </Button.IsEnabled>
+</Button>
+```
+
+### AnyConverter
+Returns true if any input is true. Input type must be boolean.
+```
+<Window.Resources>
+    <mvc:AnyConverter x:Key="any_true"/>
+</Window.Resources>
+...        
+<CheckBox Content="cb1" x:Name="cb1" HorizontalAlignment="Center"/>
+<CheckBox Content="cb2" x:Name="cb2" HorizontalAlignment="Center"/>
+<CheckBox Content="cb3" x:Name="cb3" HorizontalAlignment="Center"/>
+<CheckBox Content="cb4" x:Name="cb4" HorizontalAlignment="Center"/>
+<Button Content="All True">
+    <Button.IsEnabled>
+        <MultiBinding Converter="{StaticResource any_true}">
+            <Binding ElementName="cb1" Path="IsChecked"/>
+            <Binding ElementName="cb2" Path="IsChecked"/>
+            <Binding ElementName="cb3" Path="IsChecked"/>
+            <Binding ElementName="cb4" Path="IsChecked"/>
+        </MultiBinding>
+    </Button.IsEnabled>
+</Button>
+```
