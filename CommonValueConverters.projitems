@@ -18,6 +18,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)IntEqualConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IntGreaterEqualConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IntLessEqualConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MultiValueconverters\AddIntConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MultiValueconverters\AllConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MultiValueconverters\AnyConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NullToBoolConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringEqualityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringToLengthConverter.cs" />
