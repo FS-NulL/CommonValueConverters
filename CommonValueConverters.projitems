@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BoolInvertConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BoolToColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToStringConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BoolToVisibilityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CaseConversion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CaseConverter.cs" />
