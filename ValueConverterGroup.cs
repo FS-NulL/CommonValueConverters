@@ -31,8 +31,11 @@ namespace CommonValueConverters
         {
             ExtractParameters(parameter);
 
-            Reverse();
-            _shouldReverse = true;
+            if (_shouldReverse == false)
+            {
+                Reverse();
+                _shouldReverse = true;
+            }
 
             return this.Aggregate(value, (current, converter) => converter.ConvertBack(current, targetType, GetParameter(converter), culture));
         }

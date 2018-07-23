@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace CommonValueConverters.MultiValueconverters
 {
-    class AddIntConverter : IMultiValueConverter
+    public class AddIntConverter : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {

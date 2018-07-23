@@ -6,7 +6,7 @@ using System.Windows.Data;
 
 namespace CommonValueConverters.MultiValueconverters
 {
-    class AnyConverter : IMultiValueConverter
+    public class AnyConverter : IMultiValueConverter
     {
         /// <summary>
         ///     Returns true if any value is true.
