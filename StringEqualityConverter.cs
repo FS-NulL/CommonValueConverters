@@ -14,10 +14,11 @@ namespace CommonValueConverters
             if (!(value is string)) return DependencyProperty.UnsetValue;
 
             string s = (string)value;
+            string p = (string)parameter;
 
             if (s == null) return false;
 
-            if (s == (string)parameter) return true;
+            if (string.Compare(s, p, ComparisonType) == 0) return true;
 
             return false;
         }
@@ -26,5 +27,7 @@ namespace CommonValueConverters
         {
             throw new NotImplementedException();
         }
+
+        public StringComparison ComparisonType { get; set; } = StringComparison.CurrentCulture;
     }
 }
