@@ -25,6 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)NullToBoolConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringEqualityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringToLengthConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrimConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ValueConverterGroup.cs" />
   </ItemGroup>
 </Project>

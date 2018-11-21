@@ -34,6 +34,10 @@ Add the shared project to your solution, reference it in your project, then add 
 ```
 xmlns:vc="clr-namespace:CommonValueConverters"
 ```
+or, if using the Nuget package:
+```
+xmlns:vc="clr-namespace:CommonValueConverters;assembly=CommonWpfValueConverters"
+```
 
 ## Converters
 ### BoolInvertConverter
@@ -116,6 +120,17 @@ Returns true/false based on if the bound value matches the converter parameter.
 
 ### StringToLengthConverter
 Gets the length of a string and returns it as an integer.
+
+### TrimConverter
+Takes a string and returns the result of calling .Trim() on that string. Set the TrimChars property to use a custom set of characters to trim from the string.
+
+```
+<vc:TrimConverter x:Key="trim" TrimChars="W -"/>
+
+<TextBlock Text="{Binding ElementName=textbox, 
+                          Path=Text, 
+                          Converter={StaticResource trim}}" />
+```
 
 ## MultiValueConverters
 These converters can take multiple inputs and produce a single output. The bindings inside the multibinding can use converters too.
