@@ -9,7 +9,7 @@ namespace CommonValueConverters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is string)) return DependencyProperty.UnsetValue;
+            if (!(value is string)) return 0;
 
             string s = (string)value;
 
@@ -20,7 +20,7 @@ namespace CommonValueConverters
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             // Note: One way by design
-            throw new NotImplementedException();
+            return DependencyProperty.UnsetValue;
         }
     }
 }
